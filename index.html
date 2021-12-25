@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>CSE 578 / Fall 2021 / Homework #3</title>
+    <link rel='stylesheet' href='css/styles.css'>
+    <script src='https://d3js.org/d3.v5.min.js'></script>    
+    <script src='scripts/homework3.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    <link rel="stylesheet" href="//rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
+    <style>
+      .x-axis line, .x-axis path { stroke: #fff; }
+    </style>`
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <style> /* set the CSS */
+
+      .line {
+        fill: none;
+        stroke: black;
+        stroke-width: 2px;
+      }
+
+      .yAxis line {
+        stroke: none;  
+      }
+
+      .yAxis path{
+        stroke: none;
+      }
+
+      .yAxis text{
+        fill: grey;
+      }
+
+
+      .ytext {
+        fill: grey;
+      }
+      .xtext {
+        fill: grey;
+      }
+      
+
+
+      .xAxis line {
+        stroke: grey;  
+      }
+
+      .xAxis path{
+        stroke: grey;
+      }
+
+      .xAxis text{
+        fill: grey;
+      }
+
+
+
+      .xAxisTicks line {
+        stroke: grey;  
+      }
+
+      .xAxisTicks path{
+        stroke: grey;
+      }
+
+      .xAxisTicks text{
+        fill: none;
+      }
+
+
+      .yaxis-grid line {
+        stroke: grey;  
+      }
+
+      .yaxis-grid path{
+        stroke: none;
+      }
+
+      .yaxis-grid text{
+        fill: grey;
+      }
+
+
+
+
+
+
+      .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+        display: none;
+    }
+
+
+      .overlay {
+        fill: none;
+        pointer-events: all;
+    }
+
+    .focus circle {
+        fill: transparent;
+        stroke: black;
+    }
+
+    /* .focus text {
+        font-size: 14px;
+    } */
+
+    .tooltip {
+        fill: white;
+        stroke: #000;
+    }
+
+    .tooltip-year, .tooltip-value {
+        font-weight: bold;
+    }
+
+      
+
+      </style>
+
+  </head>
+  <body>
+    <div id='wrapper'>
+      <h2>Homework #3: Linking Charts and Adding Interactivity</h2>
+      <h3>Jose Elenes - jrelenes@asu.edu - 1206857687</h3>
+      <hr style='width:100%'>
+      <h1>GDP per Capita in Africa (1960-2011)</h1>
+      &nbsp;Year:&nbsp;
+      <input id='year-input' type='number' value='2000'/>
+      &nbsp;
+      &nbsp;Color Scale&nbsp;
+      <select id='color-scale-select'>
+        <option value='interpolateRdYlGn'>interpolateRdYlGn</option>
+        <option value='interpolateViridis'>interpolateViridis</option>
+        <option value='interpolateBrBG'>interpolateBrBG</option>
+        <option value='interpolateBlues'>interpolateBlues</option>
+        <option value='interpolateGreens'>interpolateGreens</option>
+
+
+      </select>
+      <br/>
+      <svg id='map'></svg>
+      <svg id='linechart'>
+
+      </svg>
+      Source: <a href='https://databank.worldbank.org/source/africa-development-indicators' target='_blank'>The World Bank</a>
+      <br />
+    </div>
+  </body>
+</html>
